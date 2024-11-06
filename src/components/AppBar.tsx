@@ -31,7 +31,7 @@ const AppBar: React.FC = () => {
                         {
                             LINKS.map(({ name, to, icon: Icon }) => {
                                 return (
-                                    <Link to={to} className={`appbar-link ${pathname === to ? 'active' : ''}`}>
+                                    <Link to={to} key={name} className={`appbar-link ${pathname === to ? 'active' : ''}`}>
                                         <Icon />
                                         {name}
                                     </Link>
@@ -50,7 +50,7 @@ const AppBar: React.FC = () => {
                             {
                                 !matches && LINKS.map(({ name, to, icon: Icon }) => {
                                     return (
-                                        <Link to={to} className={`flex items-center gap-2 py-2 px-4 text-sm text-grey65`}>
+                                        <Link to={to} key={name} className={`flex items-center gap-2 py-2 px-4 text-sm text-grey65`}>
                                             <Icon />
                                             {name}
                                         </Link>
