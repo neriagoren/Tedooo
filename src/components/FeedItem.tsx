@@ -9,10 +9,10 @@ import { useIntersectionObserver } from "usehooks-ts";
 
 type FeedItemProps = Pick<
     FeedItemData,
-    "id" | "username" | "avatar" | "shopName" | "images" | "comments" | "likes" | "date" | "text" | "didLike" | "premium"
+    "id" | "username" | "avatar" | "shopName" | "images" | "comments" | "likes" | "date" | "text" | "didLike"
 >;
 
-const FeedItem: React.FC<FeedItemProps> = ({ id, username, avatar, shopName, images, comments, likes, date, text, didLike, premium }) => {
+const FeedItem: React.FC<FeedItemProps> = ({ id, username, avatar, shopName, images, comments, likes, date, text, didLike }) => {
 
     const [likesCounter, setLikesCounter] = useState<number>(likes);
     const [hasLiked, setHasLiked] = useState<boolean>(didLike);
