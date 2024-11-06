@@ -3,7 +3,6 @@ interface AvatarProps {
 }
 
 const Avatar: React.FC<AvatarProps> = ({ src }) => {
-
     return (
         <div className='rounded-full h-[40px] w-[40px] overflow-hidden'>
             <img src={src} alt='avatar' />
